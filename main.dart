@@ -9,9 +9,6 @@ void main() async{
  _data = await getQuakes();
 
  _features = _data['features'];
-  //print(_data['features'][0]['properties']);
-
-
   runApp(new MaterialApp(
     title: 'Quakes',
     home: new Quakes(),
@@ -23,8 +20,6 @@ Future<Map> getQuakes() async{
 
   return json.decode(response.body);
 }
-
-
 
 class Quakes extends StatelessWidget{
   @override
